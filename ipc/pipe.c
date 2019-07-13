@@ -61,7 +61,6 @@ void server(int readfd, int writefd){
 		printf("end-of-file");
 		exit(0);
 	}
-	buff[n] = '\0';
 
 	if((fd = open(buff, O_RDONLY))<0){
 		snprintf(buff+n, sizeof(buff) - n, ": can't open, %s\n", strerror(errno));
